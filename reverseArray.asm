@@ -30,7 +30,8 @@ inputloop:
 	addi $t0, $t0, 4 	# increment the index by 4
 	addi $t1, $t1, -1	# decrement counter
 	bgtz $t1, inputloop
-	
+
+printi:
 	li $t0, 0
 	li $t1, 6
 print:
@@ -61,10 +62,8 @@ reverseArray:
 	addi $t1, $t1, -4
 	bge $t1, $t0, reverseArray
 	
-	li $t0, 0
-	li $t1, 6
 	li $t7, 0
-	beqz $0, print
+	beqz $0, printi
 	
 exit:		
 	ori $v0,$0,10
