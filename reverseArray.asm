@@ -32,7 +32,7 @@ inputloop:
 	bgtz $t1, inputloop
 	
 	li $t0, 0
-	li $t1, 5
+	li $t1, 6
 print:
 	lw $t6, myArray($t0)
 	li $v0, 1
@@ -62,7 +62,7 @@ reverseArray:
 	bge $t1, $t0, reverseArray
 	
 	li $t0, 0
-	li $t1, 5
+	li $t1, 6
 	li $t7, 0
 	beqz $0, print
 	
